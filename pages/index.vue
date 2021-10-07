@@ -1,5 +1,5 @@
 <template>
-  <main class="container">
+  <main class="container restaurant">
     <AppHeader />
     <AppRestaurantInfo />
   </main>
