@@ -16,7 +16,7 @@ export default {
     ]
   },
 
-  target: 'server',
+  target: 'static',
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
@@ -49,5 +49,5 @@ export default {
        },
        config.devtool = '#source-map'
       }
-    }
+    },
 }

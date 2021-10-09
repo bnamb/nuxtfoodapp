@@ -1,53 +1,31 @@
 <template>
   <div>
-    <label :for="select">WhichPaul {{ select }} would you like?</label>
+    <label :for="select">Choose a {{ select }}:</label>
 
-    <!-- <select @change="emit('change', event.target.value)" :id="select" :name="select"> -->
-    <!-- <select @change="onChange($event)" :id="select" :name="select">
-      <option value>-- Please select a {{ select }} --</option>
-      <option v-for="option in selectOptions" :key="option" value="option">
-        {{option}}
-        </option>
-    </select> -->
-    <button @click="name = 'Steven B'">Change Name</button>
-    <select name="LeaveType" @change="greet" class="form-control">
-      <option value="1">Annual Leave/ Off-Day</option>
-      <option value="2">On Demand Leave</option>
+    <select @change="$emit('change', $event.target.value)" :name="select" :id="select">
+      <option value>--Please choose--</option>
+      <option v-for="option in selectoptions" :key="option" :value="option">
+        {{
+        option
+        }}
+      </option>
     </select>
-    {{name}}
-
   </div>
 </template>
 
 <script>
-  export default {
-    data() {
-      return {
-        name: "Paul"
-      }
+export default {
+  props: {
+    select: {
+      type: String,
+      default: "restaurant",
     },
-    props: {
-      select: {
-        type: String,
-        default: "cuisine",
-      },
-      selectOptions: {
-        type: Array,
-        default: () => ["tacos", "pizza", "dimsum"],
-      },
+    selectoptions: {
+      type: Array,
+      default: () => ["tacos", "pizza", "dim sum"],
     },
-    methods: {
-        onChange(event) {
-            console.log(event.target.value)
-        },
-         greet() {
-          // `this` inside methods points to the current active instance
-          alert('Hello');
-        }
-    }
-  }
+  },
+};
 </script>
 
-<style lang="scss" scoped>
-
-</style>
+<style lang="scss" scoped></style>
