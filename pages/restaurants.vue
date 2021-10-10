@@ -5,7 +5,6 @@
 
       <AppSelect @change="selectedRestaurant = $event" :selectoptions="restaurantOptions" />
 
-      <pre>{{$option}}</pre>
     </div>
 
     <AppRestaurantInfo :datasource="filteredRestaurants" />

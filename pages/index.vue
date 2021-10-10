@@ -1,17 +1,17 @@
 <template>
   <main class="container">
     <AppHeader />
-    <AppRestaurantInfo />
+    <!-- <AppRestaurantInfo :datasource="filteredRestaurants" /> -->
   </main>
 </template>
 
 <script>
 import AppHeader from '@/components/AppHeader.vue';
-import AppRestaurantInfo from '@/components/AppRestaurantInfo.vue';
+// import AppRestaurantInfo from '@/components/AppRestaurantInfo.vue';
 
 export default {
   components: {
-    AppRestaurantInfo,
+    // AppRestaurantInfo,
     AppHeader,
   },
 };
