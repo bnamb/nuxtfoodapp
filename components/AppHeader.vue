@@ -22,7 +22,7 @@
     margin: auto;
     width: 100%;
     padding: 40px;
-    height: 90vh; /* if you don't want it to take up the full screen, reduce this number */
+    height: 80vh;
     overflow: hidden;
     background-size: cover !important;
     background: radial-gradient(ellipse at center, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 80%, rgba(0,0,0,0.65) 100%), url(~assets/headerimg.jpg) no-repeat center center scroll;
